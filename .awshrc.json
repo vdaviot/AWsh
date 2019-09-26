@@ -1,0 +1,14 @@
+{
+	"log": true,
+	"logfile": ".AWShell.log",
+	"error": true,
+	"errorfile": ".AWShell.err",
+	"bench": false,
+	"color": true,
+	"infosbuiltins": true,
+	"envvars": {
+					"path": "/home/vdaviot/bin:/home/vdaviot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/vdaviot/go/bin:/usr/local/go/bin/go",
+					"home": "/home/vdaviot/work/go",
+					"user": "vdaviot"
+				}
+}

@@ -1,0 +1,29 @@
+image: golang:latest
+
+before_script:
+  - go get -u github.com/golang/dep/cmd/dep
+  - export GOPATH=$(dirname $CI_PROJECT_DIR)/go
+  - mkdir -p ${GOPATH}/src/AWShell
+  - cp -r $CI_PROJECT_DIR/* $GOPATH/src/AWShell
+  - cd $GOPATH/src/AWShell
+  - dep ensure
+
+AWShell_build:
+  tags:
+    - AWShell
+  stage: build
+  script:
+    - go build
+
+AWShell_test:
+  tags:
+    - AWShell
+  stage: test
+  script:
+    - go test
+
+AWShell_deploy:
+  stage: deploy
+  script:
+    - echo "Done!"
+  when: on_success
